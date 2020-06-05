@@ -5,11 +5,12 @@ import { Link } from "react-router-dom";
 
 const { Meta } = CardComponent;
 
-export const Card = ({ el }) => {
+export const Card = ({ el, selectProduct }) => {
     const [isFlipped, chaneFlipped] = useState(false)
+    console.log('>>>selectProductAction', selectProduct)
     const onChangeFlipped = () => {
-        console.log('isFlipped', isFlipped)
         chaneFlipped(!isFlipped)
+        selectProduct(el)
     }
     return (
         <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">

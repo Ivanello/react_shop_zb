@@ -37,10 +37,11 @@ const data = [
 ]
 
 
-export const ProductList = () => {
+export const ProductListComponent = ({ onSelectProduct }) => {
+
     const renderCards = (element) => (
         <Col span={4}>
-            <Card el={element} />
+            <Card el={element} selectProduct={onSelectProduct} />
         </Col>
     )
 
