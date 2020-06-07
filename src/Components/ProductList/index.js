@@ -1,6 +1,8 @@
 import { connect } from 'react-redux'
 import { ProductListComponent } from './ProductList'
 import { selectProductAction } from 'Redux/Actions/products'
+// import { addToCartProductAction } from 'Redux/Actions/products'
+
 
 const actions = {
     onSelectProduct: selectProductAction

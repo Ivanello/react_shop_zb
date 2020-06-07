@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Layout as Wrapper, Menu, Breadcrumb } from 'antd';
+import { Layout as Wrapper, Menu } from 'antd';
 import {
     Link,
     useLocation
@@ -7,6 +7,7 @@ import {
 import {
     DesktopOutlined,
     PieChartOutlined,
+    ShoppingCartOutlined
 } from '@ant-design/icons';
 
 const { Header, Content, Footer, Sider } = Wrapper;
@@ -36,6 +37,10 @@ export const Layout = ({ children }) => {
                     <Menu.Item key="2">
                         <DesktopOutlined />
                         <span><Link to="/details" style={{ color: selected[location.pathname] === '2' && 'white' }}>Details</Link></span>
+                    </Menu.Item>
+                    <Menu.Item key="3">
+                        <ShoppingCartOutlined />
+                        <span><Link to="/cart" style={{ color: selected[location.pathname] === '3' && 'white' }}>Cart</Link></span>
                     </Menu.Item>
                 </Menu>
             </Sider>

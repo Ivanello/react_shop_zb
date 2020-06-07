@@ -1,8 +1,8 @@
 import React from 'react';
-import { Layout, Row, Col } from 'antd';
+import { Row, Col } from 'antd';
 import { CartCard } from './Blocks/CartCard'
+import { Layout } from 'UI/Layout'
 
-const { Header, Footer, Content } = Layout;
 
 const data = [
     {
@@ -52,19 +52,12 @@ export const ProductCart = () => {
     )
 
     return (
-        <Layout style={styles.layoutStyle}>
-            <Header>Header</Header>
-            <Content>
-                <Row justify="space-around">
-                    {data.map(el => renderCards(el))}
-                </Row>
-            </Content>
-            <Footer>Footer</Footer>
+        <Layout style={{ minHeight: '100vh' }}>
+            <Row justify="space-around">
+                {
+                    data.map(el => renderCards(el))
+                }
+            </Row>
         </Layout>
     );
-}
-const styles = {
-    layoutStyle: {
-        minHeight: '100vh'
-    }
 }

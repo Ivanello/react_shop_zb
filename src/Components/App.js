@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ProductList } from './ProductList'
-import { ProductDetails } from './ProductDetails'
+import { ProductDetail } from './ProductDetail'
 import { ProductCart } from './ProductCart'
 
 
@@ -19,7 +19,7 @@ function App() {
           <ProductList selectProduct={selectProduct} />
         </Route>
         <Route path='/details'>
-          <ProductDetails selectedProduct={selectedProduct} />
+          <ProductDetail selectedProduct={selectedProduct} />
         </Route>
         <Route path='/cart'>
           <ProductCart />

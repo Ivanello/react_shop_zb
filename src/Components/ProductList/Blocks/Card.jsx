@@ -7,7 +7,7 @@ const { Meta } = CardComponent;
 
 export const Card = ({ el, selectProduct }) => {
     const [isFlipped, chaneFlipped] = useState(false)
-    console.log('>>>selectProductAction', selectProduct)
+    // console.log('>>>selectProductAction', selectProduct)
     const onChangeFlipped = () => {
         chaneFlipped(!isFlipped)
         selectProduct(el)
